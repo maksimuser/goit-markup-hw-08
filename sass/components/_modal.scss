@@ -1,0 +1,43 @@
+.backdrop.is-hidden .modal {
+	transform: translate(-50%, -50%) scale(1.5);
+}
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	min-width: 528px;
+	min-height: 581px;
+	border-radius: 4px;
+
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	background: $primary-white-color;
+
+	transform: translate(-50%, -50%) scale(1);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&__btn {
+		position: absolute;
+		right: 8px;
+		top: 8px;
+
+		@include centered-flex();
+		width: 30px;
+		height: 30px;
+		padding: 0;
+
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		border-radius: 50%;
+		background-color: $primary-white-color;
+	}
+
+	&__icon-close {
+		transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+		&:hover,
+		.modal__btn:focus & {
+			fill: $accent-color;
+		}
+	}
+}

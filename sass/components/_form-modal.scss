@@ -1,0 +1,173 @@
+.form-modal {
+	width: 448px;
+	margin-top: 40px;
+	margin-right: auto;
+	margin-left: auto;
+
+	&__text {
+		margin: 0;
+		margin-bottom: 12px;
+
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 1.15;
+		text-align: center;
+
+		color: $secondary-text-color;
+	}
+
+	&__field {
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 10px;
+
+		&:nth-child(n + 4) {
+			margin-bottom: 20px;
+		}
+
+		&:nth-child(n + 5) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__label {
+		margin-bottom: 4px;
+
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 1.17;
+		letter-spacing: 0.01em;
+	}
+
+	&__input {
+		padding: 11px 0 11px 42px;
+		border-radius: 4px;
+		border: 1px solid rgba(33, 33, 33, 0.2);
+
+		transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+		&:focus {
+			outline: $accent-color;
+			border: 1px solid $accent-color;
+		}
+		&:not(:placeholder-shown):focus:invalid {
+			color: red;
+			border: 1px solid red;
+		}
+
+		&:not(:placeholder-shown):focus:valid {
+			color: green;
+			border: 1px solid green;
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		left: 12px;
+		top: 50%;
+
+		fill: $secondary-text-color;
+		transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+		.form-modal__input:focus + & {
+			fill: $accent-color;
+		}
+
+		.form-modal__input:not(:placeholder-shown):focus:invalid + & {
+			fill: red;
+		}
+
+		.form-modal__input:not(:placeholder-shown):focus:valid + & {
+			fill: green;
+		}
+	}
+
+	&__textarea {
+		height: 120px;
+		padding: 12px 16px;
+
+		border-radius: 4px;
+		border: 1px solid rgba(33, 33, 33, 0.2);
+
+		transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+		resize: none;
+
+		&::placeholder {
+			font-weight: 400;
+			line-height: 1.14;
+			letter-spacing: 0.01em;
+			color: rgba(117, 117, 117, 0.5);
+		}
+		&:focus {
+			outline: $accent-color;
+			border: 1px solid $accent-color;
+		}
+	}
+
+	&__label.policy {
+		margin-bottom: 0;
+		margin-right: auto;
+		margin-left: auto;
+
+		font-weight: 400;
+		font-size: inherit;
+		line-height: 1.71;
+		letter-spacing: inherit;
+	}
+
+	&__input-check {
+		position: absolute;
+
+		width: 1px;
+		height: 1px;
+		margin: 1px;
+		padding: 0;
+
+		border: 0;
+
+		clip: rect(0 0 0 0);
+		overflow: hidden;
+	}
+
+	&__icon-box {
+		display: inline-block;
+		vertical-align: text-top;
+		width: 16px;
+		height: 15px;
+		margin-right: 4px;
+
+		border-radius: 2px;
+		border: 2px solid $secondary-text-color;
+		background-color: $primary-white-color;
+
+		.form-modal__input-check:checked + & {
+			border-color: $accent-color;
+			background-color: $accent-color;
+			background-image: url("../images/check-on.svg");
+			background-size: contain;
+			background-origin: border-box;
+
+			transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		}
+	}
+
+	&__field .contract {
+		text-decoration-line: underline;
+		color: $accent-color;
+	}
+
+	&__btn {
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 10px 55px;
+
+		&:hover,
+		&:focus {
+			background: #188ce8;
+		}
+	}
+}

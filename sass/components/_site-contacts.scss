@@ -1,0 +1,50 @@
+.site-contacts {
+	&__link {
+		display: flex;
+		align-items: center;
+
+		font-weight: 500;
+		line-height: 1.4;
+		letter-spacing: 0.02em;
+		color: inherit;
+
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+		&:hover,
+		&:focus {
+			color: $accent-color;
+		}
+	}
+	&__icon {
+		margin-right: 10px;
+		fill: currentColor;
+
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+		.site-contacts__link:hover &,
+		.site-contacts__link:focus & {
+			color: $accent-color;
+		}
+	}
+
+	@media screen and (max-width: 1169px) {
+		&__item:first-child {
+			margin-bottom: 10px;
+		}
+
+		font-size: 12px;
+
+		&__icon {
+			margin-right: 8px;
+		}
+
+		.mail {
+			width: 14px;
+			height: 10px;
+		}
+		.tel {
+			width: 10px;
+			height: 14px;
+		}
+	}
+}
