@@ -1,5 +1,6 @@
 .main-container {
 	display: none;
+	width: 100%;
 
 	@media screen and (min-width: 768px) {
 		display: flex;
@@ -52,6 +53,11 @@
 				color: $accent-color;
 			}
 		}
+
+		@media screen and (min-width: 1200px) {
+			margin-left: 93px;
+			margin-right: 0;
+		}
 	}
 
 	.site-contacts {
@@ -79,6 +85,7 @@
 		@media screen and (min-width: 1200px) {
 			display: flex;
 			align-items: center;
+			margin-left: auto;
 
 			&__item:first-child {
 				margin-right: 30px;
