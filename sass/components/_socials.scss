@@ -1,14 +1,6 @@
 .footer-socials {
-	@media screen and (max-width: 1199px) {
-		margin-bottom: 60px;
-	}
-
-	display: flex;
-	flex-direction: column;
-
 	&__list {
-		display: flex;
-		justify-content: center;
+		display: inline-flex;
 	}
 
 	&__item {

@@ -13,10 +13,6 @@
 		&:nth-last-child(-n + 2) {
 			margin-bottom: 0;
 		}
-
-		&:nth-child(2n + 3) {
-			margin-right: 0;
-		}
 	}
 
 	&__filter {

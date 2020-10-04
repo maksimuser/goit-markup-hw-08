@@ -5,6 +5,9 @@
 	}
 
 	&__item {
+		transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		// outline: 2px solid green;
+
 		&:not(:last-child) {
 			margin-bottom: 30px;
 		}
@@ -12,8 +15,6 @@
 		&:hover {
 			box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 		}
-
-		transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 		@media screen and (min-width: 768px) {
 			width: calc((100% - 30px) / 2);
@@ -63,7 +64,7 @@
 
 		color: $primary-white-color;
 
-		transform: translateY(100%);
+		transform: translateY(101%);
 		transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 		.porfolio-list__item:hover & {
