@@ -812,8 +812,9 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 528px;
-  min-height: 581px;
+  width: 100%;
+  max-width: 450px;
+  min-height: 609px;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   background: #ffffff;
@@ -845,8 +846,16 @@ img {
   fill: #2196f3;
 }
 
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 581px;
+  }
+}
+
 .form-modal {
-  width: 448px;
+  width: 100%;
+  max-width: 370px;
   margin-top: 40px;
   margin-right: auto;
   margin-left: auto;
@@ -948,14 +957,25 @@ img {
   border: 1px solid #2196f3;
 }
 
+@media screen and (min-width: 1200px) {
+  .form-modal__textarea {
+    font-size: 12px;
+  }
+}
+
 .form-modal__label.policy {
   margin-bottom: 0;
-  margin-right: auto;
-  margin-left: auto;
+  text-align: center;
   font-weight: 400;
-  font-size: inherit;
-  line-height: 1.71;
+  line-height: 1.17;
   letter-spacing: inherit;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-modal__label.policy {
+    font-size: inherit;
+    line-height: 1.71;
+  }
 }
 
 .form-modal__input-check {
@@ -1003,5 +1023,12 @@ img {
 
 .form-modal__btn:hover, .form-modal__btn:focus {
   background: #188ce8;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-modal {
+    width: 100%;
+    max-width: 448px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

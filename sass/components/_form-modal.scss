@@ -1,5 +1,6 @@
 .form-modal {
-	width: 448px;
+	width: 100%;
+	max-width: 370px;
 	margin-top: 40px;
 	margin-right: auto;
 	margin-left: auto;
@@ -105,17 +106,25 @@
 			outline: $accent-color;
 			border: 1px solid $accent-color;
 		}
+
+		@media screen and (min-width: 1200px) {
+			font-size: 12px;
+		}
 	}
 
 	&__label.policy {
 		margin-bottom: 0;
-		margin-right: auto;
-		margin-left: auto;
+		text-align: center;
 
 		font-weight: 400;
-		font-size: inherit;
-		line-height: 1.71;
+
+		line-height: 1.17;
 		letter-spacing: inherit;
+
+		@media screen and (min-width: 1200px) {
+			font-size: inherit;
+			line-height: 1.71;
+		}
 	}
 
 	&__input-check {
@@ -169,5 +178,10 @@
 		&:focus {
 			background: #188ce8;
 		}
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 100%;
+		max-width: 448px;
 	}
 }
