@@ -1,0 +1,31 @@
+.menu-btn {
+	display: none;
+
+	@media screen and (max-width: 767px) {
+		display: inline-flex;
+		margin: 0;
+		padding: 0;
+
+		border: none;
+		background-color: transparent;
+
+		&__cross {
+			display: none;
+		}
+
+		&.is-open &__cross {
+			display: block;
+		}
+
+		&.is-open &__menu {
+			display: none;
+		}
+
+		&:hover &__cross,
+		&:focus &__cross,
+		&:hover &__menu,
+		&:focus &__menu {
+			fill: $accent-color;
+		}
+	}
+}

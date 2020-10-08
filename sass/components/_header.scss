@@ -1,8 +1,11 @@
 .header {
+	position: relative;
+
 	border-bottom: 1px solid #ececec;
 
 	&__main {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 	}
 }

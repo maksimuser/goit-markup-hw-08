@@ -17,6 +17,10 @@ body {
 
 	color: $primary-text-color;
 	background-color: $primary-white-color;
+
+	&.modal-open {
+		overflow: hidden;
+	}
 }
 
 ul,

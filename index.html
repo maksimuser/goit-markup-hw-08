@@ -21,12 +21,22 @@
 		<header class="header">
 			<div class="container header__main">
 				<a href="./" class="logo">Web<span class="logo-top">Studio</span></a>
-				<div class="main-container">
-					<ul class="site-nav">
-						<li class="site-nav__item"><a href="./" class="site-nav__link site-nav__link--current">Студия</a></li>
-						<li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link">Портфолио</a></li>
-						<li class="site-nav__item"><a href="./" class="site-nav__link">Контакты</a></li>
-					</ul>
+				<button type="button" class="menu-btn" aria-controls="menu-container" aria-expanded="true" data-menu-button>
+					<svg width="40" height="40" aria-label="Переключатель мобильного меню">
+						<use class="menu-btn__cross" href="./images/sprite.svg#icon-cross"></use>
+						<use class="menu-btn__menu" href="./images/sprite.svg#icon-menu"></use>
+					</svg>
+				</button>
+				<div class="menu-container" id="menu-container" data-menu>
+					<nav class="header__nav">
+						<ul class="site-nav">
+							<li class="site-nav__item"><a href="./" class="site-nav__link site-nav__link--current">Студия</a></li>
+							<li class="site-nav__item">
+								<a href="./portfolio.html" class="site-nav__link">Портфолио</a>
+							</li>
+							<li class="site-nav__item"><a href="./" class="site-nav__link">Контакты</a></li>
+						</ul>
+					</nav>
 
 					<ul class="site-contacts">
 						<li class="site-contacts__item">
@@ -64,7 +74,7 @@
 			<!-- features -->
 			<section class="section features">
 				<div class="container">
-					<h2 class="visually-hidden">Особенности</h2>
+					<h2 class="visually-hidden" aria-label="Особенности">Особенности</h2>
 					<ul class="features-list">
 						<li class="features-list__item">
 							<div class="features-list__wrap-icon">
@@ -122,17 +132,27 @@
 					<h2 class="title caption">Чем мы занимаемся</h2>
 					<ul class="work-list">
 						<li class="work-list__item">
-							<img src="./images/box1.jpg" alt="computer" width="370" height="294" />
+							<picture>
+								<source srcset="./images/desktop/work/deskapp.jpg 1x, ./images/desktop/work/deskapp@2x.jpg 2x" />
+
+								<img src="./images/desktop/work/box1.jpg" alt="desktopapp" width="370" height="294" />
+							</picture>
 							<p class="work-list__desc">Десктопные приложения</p>
 						</li>
 
 						<li class="work-list__item">
-							<img src="./images/box2.jpg" alt="phone" width="370" height="294" />
+							<picture>
+								<source srcset="./images/desktop/work/mobileapp.jpg 1x, ./images/desktop/work/mobileapp@2x.jpg 2x" />
+								<img src="./images/desktop/work/box2.jpg" alt="mobileapp" width="370" height="294" />
+							</picture>
 							<p class="work-list__desc">Мобильные приложения</p>
 						</li>
 
 						<li class="work-list__item">
-							<img src="./images/box3.jpg" alt="tablet" width="370" height="294" />
+							<picture>
+								<source srcset="./images/desktop/work/design.jpg 1x, ./images/desktop/work/design@2x.jpg 2x" />
+								<img src="./images/desktop/work/box3.jpg" alt="design" width="370" height="294" />
+							</picture>
 							<p class="work-list__desc">Дизайнерские решения</p>
 						</li>
 					</ul>
@@ -145,7 +165,23 @@
 					<h2 class="title caption">Наша команда</h2>
 					<ul class="team-list">
 						<li class="team-list__item">
-							<img src="./images/demaynenko.jpg" alt="Игорь Демьяненко" width="270" height="260" />
+							<picture>
+								<source
+									srcset="./images/desktop/team/igor.jpg 1x, ./images/desktop/team/igor@2x.jpg 2x"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="./images/tablet/team/igor.jpg 1x, ./images/tablet/team/igor@2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="./images/mobile/team/igor.jpg 1x, ./images/mobile/team/igor@2x.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+
+								<img src="./images/igor.jpg" alt="Игорь Демьяненко" />
+							</picture>
+
 							<h3 class="team-list__title">Игорь Демьяненко</h3>
 							<p lang="en" class="team-list__text">Product Designer</p>
 							<ul class="team-socials">
@@ -180,7 +216,21 @@
 							</ul>
 						</li>
 						<li class="team-list__item">
-							<img src="./images/repina.jpg" alt="Ольга Репина" width="270" height="260" />
+							<picture>
+								<source
+									srcset="./images/desktop/team/olga.jpg 1x, ./images/desktop/team/olga@2x.jpg 2x"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="./images/tablet/team/olga.jpg 1x, ./images/tablet/team/olga@2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="./images/mobile/team/olga.jpg 1x, ./images/mobile/team/olga@2x.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+								<img src="./images/olga.jpg" alt="Ольга Репина" />
+							</picture>
 							<h3 class="team-list__title">Ольга Репина</h3>
 							<p lang="en" class="team-list__text">Frontend Developer</p>
 							<ul class="team-socials">
@@ -215,7 +265,22 @@
 							</ul>
 						</li>
 						<li class="team-list__item">
-							<img src="./images/tarasov.jpg" alt="Николай Тарасов" width="270" height="260" />
+							<picture>
+								<source
+									srcset="./images/desktop/team/nikolay.jpg 1x, ./images/desktop/team/nikolay@2x.jpg 2x"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="./images/tablet/team/nikolay.jpg 1x, ./images/tablet/team/nikolay@2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="./images/mobile/team/nikolay.jpg 1x, ./images/mobile/team/nikolay@2x.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+								<img src="./images/nikolay.jpg" alt="Николай Тарасов" />
+							</picture>
+
 							<h3 class="team-list__title">Николай Тарасов</h3>
 							<p lang="en" class="team-list__text">Marketing</p>
 							<ul class="team-socials">
@@ -250,7 +315,22 @@
 							</ul>
 						</li>
 						<li class="team-list__item">
-							<img src="./images/ermakov.jpg" alt="Михаил Ермаков" width="270" height="260" />
+							<picture>
+								<source
+									srcset="./images/desktop/team/mihail.jpg 1x, ./images/desktop/team/mihail@2x.jpg 2x"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="./images/tablet/team/mihail.jpg 1x, ./images/tablet/team/mihail@2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="./images/mobile/team/mihail.jpg 1x, ./images/mobile/team/mihail@2x.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+								<img src="./images/mihail.jpg" alt="Михаил Ермаков" />
+							</picture>
+
 							<h3 class="team-list__title">Михаил Ермаков</h3>
 							<p lang="en" class="team-list__text">UI Designer</p>
 							<ul class="team-socials">
@@ -420,7 +500,6 @@
 					</svg>
 				</button>
 
-				<!-- form - modal window -->
 				<div class="form-modal">
 					<p class="form-modal__text">Оставьте свои данные, мы вам перезвоним</p>
 					<form autocomplete="off">
@@ -475,5 +554,6 @@
 		</div>
 
 		<script src="./js/modal.js"></script>
+		<script src="./js/menu.js"></script>
 	</body>
 </html>

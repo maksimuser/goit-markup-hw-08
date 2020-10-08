@@ -1,9 +1,5 @@
 .form-modal {
 	width: 100%;
-	max-width: 370px;
-	margin-top: 40px;
-	margin-right: auto;
-	margin-left: auto;
 
 	&__text {
 		margin: 0;
@@ -170,18 +166,12 @@
 
 	&__btn {
 		display: block;
-		margin-right: auto;
-		margin-left: auto;
 		padding: 10px 55px;
+		margin: 0 auto;
 
 		&:hover,
 		&:focus {
 			background: #188ce8;
 		}
-	}
-
-	@media screen and (min-width: 1200px) {
-		width: 100%;
-		max-width: 448px;
 	}
 }
