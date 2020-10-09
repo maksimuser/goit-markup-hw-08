@@ -90,7 +90,6 @@
 	}
 
 	.site-contacts {
-		// text-align: center;
 		margin-left: auto;
 
 		@media screen and (max-width: 768px) {
@@ -110,6 +109,7 @@
 		}
 
 		@media screen and (min-width: 768px) and (max-width: 1199px) {
+			font-size: 12px;
 			&__item:first-child {
 				margin-bottom: 10px;
 			}
@@ -125,15 +125,6 @@
 			.tel {
 				width: 10px;
 				height: 14px;
-			}
-		}
-
-		@media screen and (min-width: 1200px) {
-			display: flex;
-			// align-items: center;
-
-			&__item:first-child {
-				margin-right: 30px;
 			}
 		}
 
@@ -168,13 +159,20 @@
 				color: $accent-color;
 			}
 		}
+
+		@media screen and (min-width: 1200px) {
+			display: flex;
+
+			&__item:first-child {
+				margin-right: 30px;
+			}
+		}
 	}
 
 	@media screen and (min-width: 768px) {
 		display: flex;
 		align-items: center;
 		margin-left: 88px;
-		font-size: 12px;
 	}
 
 	@media screen and (min-width: 1200px) {
